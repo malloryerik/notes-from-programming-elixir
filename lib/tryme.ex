@@ -12,8 +12,14 @@ defmodule Tryme do
       :world
 
   """
-  def hello do
-    IO.puts "hey hey there, mundo"
+  
+  def hello(name) do
+    IO.puts "hey hey there, #{name}"
   end
+
+
+
+
+
 end
 
