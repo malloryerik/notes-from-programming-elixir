@@ -148,5 +148,16 @@ defmodule Z do
     def span2(to, to), do: [ to ]
     def span2(from, to) when from < to, do: [ from | span(from + 1, to) ]
 
+    def capitalize_sentences(str) do
+      str
+      |> String.split( ". ")
+      |> Enum.map( &(String.capitalize &1))
+      |> Enum.join(". ")
+    end
 end  # end Z module  
+
+defmodule Subscriber do
+  defstruct name: "", paid: false, over_18: true
+
+end
 
